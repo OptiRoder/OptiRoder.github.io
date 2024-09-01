@@ -1,0 +1,51 @@
+/* Estilo general de la página */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Fondo oscuro */
+    color: #e0e0e0; /* Texto de color claro */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Estilo del contenedor principal */
+.container {
+    text-align: center;
+}
+
+/* Estilo de la caja que contiene la instalación */
+.install-box {
+    background-color: #1f1f1f; /* Tono gris oscuro */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Sombra */
+    display: inline-block;
+    width: 300px;
+}
+
+/* Estilo de la imagen del CMD */
+.cmd-icon {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+/* Estilo del botón de descarga */
+.download-button {
+    display: inline-block;
+    background-color: #007BFF; /* Color azul tecnológico */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
+}
+
+/* Efecto hover en el botón de descarga */
+.download-button:hover {
+    background-color: #0056b3; /* Color más oscuro al pasar el mouse */
+}
