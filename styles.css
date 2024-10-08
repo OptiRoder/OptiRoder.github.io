@@ -53,28 +53,3 @@ body {
 .download-button:hover {
     background-color: #0056b3; /* Color más oscuro al pasar el mouse */
 }
-
-.footer {
-    background-color: #333; /* Color de fondo oscuro */
-    color: white; /* Color del texto */
-    text-align: center; /* Centra el texto */
-    padding: 20px 0; /* Espaciado vertical */
-    width: 100%; /* Asegura que el footer ocupe todo el ancho */
-}
-
-.footer .container {
-    max-width: 1200px; /* Ancho máximo del contenido */
-    margin: 0 auto; /* Centra el contenido dentro del footer */
-    padding: 0 20px; /* Espaciado horizontal */
-}
-
-.footer p {
-    margin: 0; /* Elimina el margen predeterminado */
-    font-size: 16px; /* Tamaño de fuente */
-}
-
-/* Efecto de hover para el texto (opcional) */
-.footer p:hover {
-    color: #ff9800; /* Cambia el color del texto al pasar el mouse */
-    transition: color 0.3s ease; /* Transición suave */
-}
