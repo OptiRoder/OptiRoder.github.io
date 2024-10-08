@@ -7,15 +7,17 @@ body {
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column; /* Cambiar a columna para alinear elementos verticalmente */
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    justify-content: space-between; /* Espaciado entre elementos */
+    min-height: 100vh; /* Asegura que el body ocupe al menos la altura de la ventana */
 }
 
 /* Estilo del contenedor principal */
 .container {
     text-align: center;
     flex-grow: 1; /* Permite que el contenedor principal crezca */
+    display: flex; /* Habilita flexbox para centrar la caja de instalación */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
 }
 
 /* Estilo de la caja que contiene la instalación */
