@@ -1,78 +1,186 @@
-/* Estilo general de la página */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #121212; /* Fondo oscuro */
-    color: #e0e0e0; /* Texto de color claro */
-    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+
+}
+
+.main {
+    margin-bottom: 40px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #7f7676;
+    box-sizing: border-box;
 }
 
-/* Estilo del contenedor principal */
 .container {
-    text-align: center;
+    display: flex;
+    height: auto;
+    flex-direction: row;
+    gap: 20px;
+    box-sizing: border-box;
+    max-width: 1300px;
 }
 
-/* Estilo de la caja que contiene la instalación */
-.install-box {
-    background-color: #1f1f1f; /* Tono gris oscuro */
+.basic, .pro, .enterprise {
+    background-color: #efebeb;
     border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Sombra */
-    display: inline-block;
-    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    text-align: center;
+    transform: scale(1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
-/* Estilo de la imagen del CMD */
-.cmd-icon {
-    width: 100px;
-    margin-bottom: 20px;
+h1 { 
+    margin: 0;
+    margin: 10px;
+    font-size: 3rem;
+    color: #fff;
+
 }
 
-/* Estilo del botón de descarga */
-.download-button {
-    display: inline-block;
-    background-color: #007BFF; /* Color azul tecnológico */
-    color: white;
-    padding: 10px 20px;
+.basic:hover, .pro:hover, .enterprise:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.title-basic {
+    font-size: 2rem;
+    margin: 20px 0 10px 0;
+    padding: 10px;
+    background-color: #fa875d;
+    border-radius: 3px;
+}
+
+.title-pro {
+    font-size: 2rem;
+    margin: 20px 0 10px 0;
+    padding: 10px;
+    background-color: #6fcf97;
+    border-radius: 3px;
+}
+
+.title-enterprise {
+    font-size: 2rem;
+    margin: 20px 0 10px 0;
+    padding: 10px;
+    background-color: #56ccf2;
+    border-radius: 3px;
+}
+
+.precio-basic, .precio-pro, .precio-enterprise {
+    font-size: 1.5rem;
+    font-family: "Roboto", sans-serif;
+    margin: 10px 0;
+}
+
+.mes {
+    display: block; 
+    font-size: 1rem;
+    color: rgba(128, 128, 128, 0.726)
+}
+
+.precio-basic, .precio-pro, .precio-enterprise {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.purchase-1 {
+    margin: 30px;
+    padding: 10px 25px;
+    border: none;
     border-radius: 5px;
-    text-decoration: none;
-    margin-top: 10px;
-    font-weight: bold;
-    transition: background-color 0.3s ease; /* Transición suave para el hover */
+    background-color: #fa875d
 }
 
-/* Efecto hover en el botón de descarga */
-.download-button:hover {
-    background-color: #0056b3; /* Color más oscuro al pasar el mouse */
+.purchase-2 {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    margin: 15px;
+    background-color: #6fcf97
 }
 
-.footer {
-    background-color: #333; /* Color de fondo oscuro */
-    color: white; /* Color del texto */
-    text-align: center; /* Centra el texto */
-    padding: 20px 0; /* Espaciado vertical */
-    position: relative; /* Posiciona el footer */
-    bottom: 0; /* Mantiene el footer en la parte inferior */
-    width: 100%; /* Asegura que el footer ocupe todo el ancho */
+.purchase-3 {
+    margin: 15px;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    background-color: #56ccf2
 }
 
-.footer .container {
-    max-width: 1200px; /* Ancho máximo del contenido */
-    margin: 0 auto; /* Centra el contenido dentro del footer */
-    padding: 0 20px; /* Espaciado horizontal */
+.purchase-1:hover {
+    background-color: #e6734a;
+    
 }
 
-.footer p {
-    margin: 0; /* Elimina el margen predeterminado */
-    font-size: 16px; /* Tamaño de fuente */
+.purchase-2:hover {
+    background-color: #5ec286;   
 }
 
-/* Efecto de hover para el texto (opcional) */
-.footer p:hover {
-    color: #ff9800; /* Cambia el color del texto al pasar el mouse */
-    transition: color 0.3s ease; /* Transición suave */
+.purchase-3:hover {
+    background-color: #45b0d1;   
+}
+
+button {
+    transform: scale(1);
+    transition: transform 0.2s ease;
+    margin-top: 15px;
+}
+
+button:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.features-negrito {
+    background-color:#97999ab2
+}
+
+.features-gris {
+    background-color:#d3d3d3b2
+}
+
+.features-gris, .features-negrito {
+    margin: 0;
+    padding: 10px;
+    border-radius: 3px;
+    font-weight: 700;
+}
+
+.descripcion {
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.675);
+    margin: 0 20px 10px 20px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 600;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        align-items: center;
+    }
+
+    .basic, .pro, .enterprise {
+        width: 90%;
+        margin: 10px 0;
+        max-width: 400px;
+    }
 }
