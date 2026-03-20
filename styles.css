@@ -141,3 +141,50 @@ p {
     flex-shrink: 0; /* Evita que el botón se encoja */
     transition: background 0.2s;
 }
+
+
+/* Ensanchamos un poco la tarjeta para que quepa más texto */
+.card {
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: 90%;          
+    max-width: 500px;    /* Aumentado de 400px a 500px */
+}
+
+/* Caja de comando: Alineamos a la izquierda */
+.command-box {
+    background-color: #000;
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: 1px solid #333;
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: auto; /* Esto permite scroll si es muy largo */
+}
+
+/* Fuerza a que el comando NO se rompa en varias líneas */
+#ps-command {
+    white-space: nowrap; /* ¡Clave! Esto evita los saltos de línea */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85rem;
+    color: #00ff41;
+    margin-right: 15px;
+    text-align: left; /* Alineado a la izquierda dentro de su espacio */
+}
+
+/* El botón no se encoge */
+.copy-btn {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    flex-shrink: 0; /* Evita que el botón se aplaste */
+}
