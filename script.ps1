@@ -23,7 +23,7 @@ Expand-Archive -Path $zipFinal -DestinationPath $destino -Force
 Remove-Item -Path $zipFinal -Force
 
 # 6. Ejecutar el programa principal
-$archivoEjecutable = "$destino\OptiRoder-Toolkit.ps1"
+$archivoEjecutable = "$destino\ToolKit\OptiRoder-Toolkit.ps1"
 if (Test-Path $archivoEjecutable) {
     Write-Host "Iniciando ToolKit..." -ForegroundColor Green
     # Usamos powershell.exe para asegurar que el script se ejecute correctamente
