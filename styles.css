@@ -94,3 +94,50 @@ p {
 .copy-btn:hover {
     background-color: #666;
 }
+
+/* El contenedor principal - Lo hice un poco más ancho */
+.card {
+    background-color: #1a1a1a;
+    padding: 40px 30px; /* Ajusté el padding lateral */
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: 90%;          /* Responsivo */
+    max-width: 400px;    /* Máximo ancho */
+}
+
+/* El bloque de comando - Ahora es más flexible */
+.command-box {
+    background-color: #000;
+    padding: 12px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #333;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85rem;
+    color: #00ff41;
+    margin: 15px 0;
+    overflow-x: auto; /* IMPORTANTE: Esto permite scroll si el link es largo */
+    gap: 10px;        /* Espacio entre el código y el botón */
+}
+
+/* Ajuste del texto para que no se rompa */
+#ps-command {
+    white-space: nowrap; /* Mantiene el comando en una sola línea */
+    margin-right: 10px;
+}
+
+/* El botón de copiar */
+.copy-btn {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    flex-shrink: 0; /* Evita que el botón se encoja */
+    transition: background 0.2s;
+}
