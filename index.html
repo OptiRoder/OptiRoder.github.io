@@ -15,15 +15,30 @@
             <span class="terminal-icon">>_</span>
         </div>
         
-        <p>Instalar Toolkit</p>
+        <p>Instalar mediante PowerShell:</p>
         
-        <a href="https://github.com/OptiRoder/OptiRoder.github.io/releases/download/v2.0.0/ToolKit.rar" class="download-btn">Descargar</a>
+        <!-- Bloque del comando -->
+        <div class="command-box">
+            <code id="ps-command">irm https://optiroder.github.io/script.ps1 | iex</code>
+            <button onclick="copyCommand()" class="copy-btn">Copiar</button>
+        </div>
+        
+        <p style="margin-top: 20px;">O descarga el archivo:</p>
+        <a href="https://github.com/OptiRoder/OptiRoder.github.io/releases/download/v2.0.0/ToolKit.rar" class="download-btn">Descargar ZIP</a>
     </div>
 
+    <script>
+        function copyCommand() {
+            const command = document.getElementById("ps-command").innerText;
+            navigator.clipboard.writeText(command).then(() => {
+                const btn = document.querySelector(".copy-btn");
+                btn.innerText = "¡Copiado!";
+                setTimeout(() => { btn.innerText = "Copiar"; }, 2000);
+            });
+        }
+    </script>
 </body>
 </html>
-</html>
-
 
 
 
