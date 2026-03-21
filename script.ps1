@@ -6,7 +6,7 @@ if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]:
 }
 
 # 2. Definir rutas
-$zipUrl = "https://github.com/OptiRoder/OptiRoder.github.io/releases/download/v2.0.0/ToolKit.zip"
+$zipUrl = "https://github.com/OptiRoder/OptiRoder.github.io/releases/latest/download/ToolKit.zip"
 $destino = "C:\ToolKit"
 $zipFinal = "$env:TEMP\OptiRoder.zip" # Nombre único temporal
 
