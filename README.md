@@ -1,4 +1,4 @@
-Esto es un menu CMD de optimizaciones para Windows 10
+Esto es un menu POWERSHELL de optimizaciones para Windows 10
 
 
 # OptiRoder Toolkit
