@@ -6,7 +6,7 @@ Esto es un menu POWERSHELL de optimizaciones para Windows 10
 Para instalar y ejecutar la herramienta, simplemente abre PowerShell como Administrador y pega el siguiente comando:
 
 
-"irm https://optiroder.github.io/script.ps1 | iex"
+"irm https://optiroder.github.io/toolkit.ps1 | iex"
 
 o instalar el .zip en release
 
