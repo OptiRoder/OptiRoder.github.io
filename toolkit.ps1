@@ -16,11 +16,16 @@ Expand-Archive -Path $zipFinal -DestinationPath $destino -Force
 Remove-Item -Path $zipFinal -Force
 
 # 5. Ejecutar el programa principal
-$archivoEjecutable = "$destino\OptiRoder-Toolkit.exe"
-if (Test-Path $archivoEjecutable) {
+$archivoExe = "$destino\OptiRoder-Toolkit.exe"
+$archivoPs1 = "$destino\OptiRoder-Toolkit.ps1"
+
+if (Test-Path $archivoExe) {
     Write-Host "Iniciando ToolKit..." -ForegroundColor Green
-    powershell.exe -ExecutionPolicy Bypass -File $archivoEjecutable
+    Start-Process $archivoExe
+} elseif (Test-Path $archivoPs1) {
+    Write-Host "Iniciando ToolKit..." -ForegroundColor Green
+    powershell.exe -NoProfile -ExecutionPolicy Bypass -STA -File $archivoPs1
 } else {
-    Write-Host "Error: No se encontro el archivo principal en $archivoEjecutable" -ForegroundColor Red
+    Write-Host "Error: No se encontro el archivo principal (OptiRoder-Toolkit.exe o OptiRoder-Toolkit.ps1) en $destino" -ForegroundColor Red
     Read-Host "Presiona Enter para cerrar..."
 }
