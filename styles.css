@@ -1,190 +1,375 @@
-/* Limpiar márgenes y centrar todo en la pantalla */
+/* ============================================================
+   OPTIRODER TOOLKIT — DOWNLOAD PAGE
+   Design: Dark glassmorphism, purple/blue accent, premium feel
+   ============================================================ */
+
+/* ---- RESET & BASE ---- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+    --bg:          #07070f;
+    --surface:     #0e0e1a;
+    --surface2:    #14142a;
+    --border:      rgba(255,255,255,0.07);
+    --border-glow: rgba(123,47,255,0.35);
+    --text:        #e8e8ff;
+    --muted:       #7878aa;
+    --accent:      #7b2fff;
+    --accent2:     #a855f7;
+    --blue:        #3b82f6;
+    --purple:      #7b2fff;
+    --amber:       #f59e0b;
+    --green:       #22c55e;
+    --radius:      14px;
+    --radius-sm:   8px;
+    --font:        'Inter', system-ui, sans-serif;
+    --mono:        'JetBrains Mono', 'Courier New', monospace;
+    --shadow:      0 24px 60px rgba(0,0,0,0.7);
+    --transition:  0.22s cubic-bezier(.4,0,.2,1);
+}
+
+html { font-size: 16px; scroll-behavior: smooth; }
+
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #0d0d0d; /* Fondo oscuro principal */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg);
+    font-family: var(--font);
+    color: var(--text);
+    min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    color: #e0e0e0;
+    align-items: flex-start;
+    padding: 60px 20px 80px;
+    overflow-x: hidden;
 }
 
-/* El contenedor principal (la tarjeta) */
-.card {
-    background-color: #1a1a1a; /* Un gris un poco más claro que el fondo */
-    padding: 40px 50px;
-    border-radius: 12px;
+/* ---- BACKGROUND EFFECTS ---- */
+.bg-grid {
+    position: fixed; inset: 0; z-index: 0;
+    background-image:
+        linear-gradient(rgba(123,47,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(123,47,255,0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+}
+
+.bg-glow {
+    position: fixed; inset: 0; z-index: 0;
+    background:
+        radial-gradient(ellipse 60% 50% at 50% -10%, rgba(123,47,255,0.18), transparent),
+        radial-gradient(ellipse 40% 40% at 80% 80%, rgba(59,130,246,0.1), transparent);
+    pointer-events: none;
+}
+
+/* ---- WRAPPER ---- */
+.wrapper {
+    position: relative; z-index: 1;
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+}
+
+/* ---- HERO ---- */
+.hero {
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    width: 300px;
-}
-
-/* Título */
-h1 {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-    font-weight: 600;
-}
-
-/* El icono del terminal */
-.icon-container {
-    background-color: #121212;
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 20px auto;
-    border-radius: 12px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    font-size: 2.5rem;
-    color: #ffffff;
+    gap: 14px;
+    padding-bottom: 8px;
 }
 
-/* Texto de abajo */
-p {
-    margin-bottom: 25px;
-    font-size: 0.95rem;
-    color: #b0b0b0;
-}
-
-/* El botón de descarga */
-.download-btn {
+.hero-badge {
     display: inline-block;
-    background-color: #007bff; /* Azul clásico */
-    color: white;
-    padding: 10px 30px;
-    text-decoration: none;
-    border-radius: 6px;
+    background: rgba(123,47,255,0.18);
+    border: 1px solid rgba(123,47,255,0.4);
+    color: var(--accent2);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    padding: 4px 14px;
+    border-radius: 100px;
+    font-family: var(--mono);
+}
+
+.terminal-icon {
+    width: 72px; height: 72px;
+    background: linear-gradient(135deg, #1a0a3a 0%, #0d0d26 100%);
+    border: 1px solid rgba(123,47,255,0.4);
+    border-radius: var(--radius);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--mono);
+    font-size: 1.7rem;
+    color: var(--accent2);
+    box-shadow: 0 0 30px rgba(123,47,255,0.25), inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+}
+
+h1 .accent {
+    background: linear-gradient(135deg, var(--accent2) 0%, #60a5fa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-sub {
+    color: var(--muted);
+    font-size: 1rem;
+    max-width: 460px;
+    line-height: 1.6;
+}
+
+.hero-sub strong { color: var(--text); font-weight: 600; }
+
+/* ---- SECTION LABEL ---- */
+.section-label {
+    width: 100%;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding-left: 4px;
+    margin-bottom: -14px;
+}
+
+/* ---- COMMAND BOX ---- */
+.command-box {
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    backdrop-filter: blur(8px);
+    transition: border-color var(--transition);
+}
+
+.command-box:hover { border-color: rgba(123,47,255,0.3); }
+
+.command-box code {
+    font-family: var(--mono);
+    font-size: 0.88rem;
+    color: #4ade80;
+    white-space: nowrap;
+    overflow-x: auto;
+    flex: 1;
+}
+
+.copy-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255,255,255,0.07);
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 6px 14px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-family: var(--font);
     font-weight: 500;
-    transition: background-color 0.3s ease;
+    flex-shrink: 0;
+    transition: background var(--transition), border-color var(--transition);
 }
 
-.download-btn:hover {
-    background-color: #0056b3; /* Un azul más oscuro al pasar el ratón */
+.copy-btn:hover { background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.18); }
+.copy-btn.copied { color: #4ade80; border-color: rgba(74,222,128,0.4); }
+
+/* ---- CARDS GRID ---- */
+.cards-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
 }
 
-/* Estilos para el bloque de comando */
-.command-box {
-    background-color: #000;
-    padding: 15px;
-    border-radius: 6px;
+/* ---- EDITION CARD ---- */
+.edition-card {
+    position: relative;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 26px 24px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 16px;
+    transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+.edition-card:hover {
+    border-color: rgba(255,255,255,0.14);
+    transform: translateY(-3px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+/* Featured card glow */
+.card-featured {
+    border-color: rgba(123,47,255,0.45);
+    background: linear-gradient(160deg, rgba(123,47,255,0.08) 0%, var(--surface) 60%);
+    box-shadow: 0 0 0 1px rgba(123,47,255,0.15), 0 8px 32px rgba(123,47,255,0.15);
+}
+
+.card-featured:hover {
+    border-color: rgba(123,47,255,0.7);
+    box-shadow: 0 0 0 1px rgba(123,47,255,0.3), 0 20px 50px rgba(123,47,255,0.2);
+}
+
+.featured-tag {
+    position: absolute;
+    top: -1px; right: 20px;
+    background: linear-gradient(135deg, var(--accent) 0%, #a855f7 100%);
+    color: #fff;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 0 0 8px 8px;
+}
+
+/* Card header */
+.card-header {
+    display: flex;
     align-items: center;
-    border: 1px solid #333;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 0.85rem;
-    color: #00ff41; /* Verde tipo consola */
-    margin-bottom: 10px;
+    gap: 14px;
 }
 
-.copy-btn {
-    background-color: #444;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 0.8rem;
-    transition: background 0.2s;
-}
-
-.copy-btn:hover {
-    background-color: #666;
-}
-
-/* El contenedor principal - Lo hice un poco más ancho */
-.card {
-    background-color: #1a1a1a;
-    padding: 40px 30px; /* Ajusté el padding lateral */
+.card-icon {
+    width: 48px; height: 48px;
     border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    width: 90%;          /* Responsivo */
-    max-width: 400px;    /* Máximo ancho */
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
 }
 
-/* El bloque de comando - Ahora es más flexible */
-.command-box {
-    background-color: #000;
-    padding: 12px;
-    border-radius: 6px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid #333;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 0.85rem;
-    color: #00ff41;
-    margin: 15px 0;
-    overflow-x: auto; /* IMPORTANTE: Esto permite scroll si el link es largo */
-    gap: 10px;        /* Espacio entre el código y el botón */
+.portable-icon  { background: rgba(59,130,246,0.15);  border: 1px solid rgba(59,130,246,0.3);  color: #60a5fa; }
+.installer-icon { background: rgba(123,47,255,0.15); border: 1px solid rgba(123,47,255,0.3); color: #a78bfa; }
+.offline-icon   { background: rgba(245,158,11,0.12); border: 1px solid rgba(245,158,11,0.3); color: #fbbf24; }
+
+.card-header h2 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    margin-bottom: 5px;
 }
 
-/* Ajuste del texto para que no se rompa */
-#ps-command {
-    white-space: nowrap; /* Mantiene el comando en una sola línea */
-    margin-right: 10px;
-}
-
-/* El botón de copiar */
-.copy-btn {
-    background-color: #444;
-    color: white;
-    border: none;
-    padding: 6px 12px;
+/* Badges */
+.badge {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    font-weight: 600;
+    padding: 2px 8px;
     border-radius: 4px;
-    cursor: pointer;
-    font-size: 0.8rem;
-    flex-shrink: 0; /* Evita que el botón se encoja */
-    transition: background 0.2s;
+    letter-spacing: 0.04em;
 }
 
+.badge-blue   { background: rgba(59,130,246,0.15);  color: #60a5fa; border: 1px solid rgba(59,130,246,0.25); }
+.badge-purple { background: rgba(123,47,255,0.15); color: #a78bfa; border: 1px solid rgba(123,47,255,0.3); }
+.badge-amber  { background: rgba(245,158,11,0.12); color: #fbbf24; border: 1px solid rgba(245,158,11,0.25); }
 
-/* Ensanchamos un poco la tarjeta para que quepa más texto */
-.card {
-    background-color: #1a1a1a;
-    padding: 30px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    width: 90%;          
-    max-width: 500px;    /* Aumentado de 400px a 500px */
+/* Card description */
+.card-desc {
+    font-size: 0.875rem;
+    color: var(--muted);
+    line-height: 1.6;
 }
 
-/* Caja de comando: Alineamos a la izquierda */
-.command-box {
-    background-color: #000;
-    padding: 10px 15px;
-    border-radius: 6px;
-    border: 1px solid #333;
-    margin: 15px 0;
+/* Card features list */
+.card-features {
+    list-style: none;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+}
+
+.card-features li {
+    font-size: 0.82rem;
+    color: #9898cc;
+    display: flex;
     align-items: center;
-    overflow-x: auto; /* Esto permite scroll si es muy largo */
+    gap: 6px;
 }
 
-/* Fuerza a que el comando NO se rompa en varias líneas */
-#ps-command {
-    white-space: nowrap; /* ¡Clave! Esto evita los saltos de línea */
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 0.85rem;
-    color: #00ff41;
-    margin-right: 15px;
-    text-align: left; /* Alineado a la izquierda dentro de su espacio */
-}
-
-/* El botón no se encoge */
-.copy-btn {
-    background-color: #444;
-    color: white;
+/* Download buttons */
+.dl-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 11px 20px;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: opacity var(--transition), transform var(--transition), box-shadow var(--transition);
     border: none;
-    padding: 6px 12px;
-    border-radius: 4px;
     cursor: pointer;
-    font-size: 0.8rem;
-    flex-shrink: 0; /* Evita que el botón se aplaste */
+    width: 100%;
+    margin-top: auto;
+}
+
+.dl-btn:hover { opacity: 0.88; transform: translateY(-1px); }
+.dl-btn:active { transform: translateY(0); }
+
+.dl-blue {
+    background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(59,130,246,0.3);
+}
+.dl-blue:hover { box-shadow: 0 8px 24px rgba(59,130,246,0.45); }
+
+.dl-purple {
+    background: linear-gradient(135deg, var(--accent) 0%, #a855f7 100%);
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(123,47,255,0.35);
+}
+.dl-purple:hover { box-shadow: 0 8px 24px rgba(123,47,255,0.5); }
+
+.dl-amber {
+    background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%);
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(245,158,11,0.25);
+}
+.dl-amber:hover { box-shadow: 0 8px 24px rgba(245,158,11,0.4); }
+
+/* ---- FOOTER ---- */
+.footer {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: var(--muted);
+    font-size: 0.82rem;
+    padding-top: 8px;
+}
+
+.gh-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+.gh-link:hover { color: var(--text); }
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 600px) {
+    body { padding: 40px 14px 60px; }
+    .cards-grid { grid-template-columns: 1fr; }
+    h1 { font-size: 2rem; }
 }
