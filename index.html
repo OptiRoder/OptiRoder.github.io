@@ -41,21 +41,53 @@
             </a>
 
             <ul class="nav-links">
-                <li><a href="#caracteristicas">Características</a></li>
-                <li><a href="#capturas">Interfaz</a></li>
-                <li><a href="#descargas">Descargas</a></li>
-                <li><a href="#precios">Precios</a></li>
-                <li><a href="#faq">Preguntas</a></li>
+                <li><a href="#caracteristicas" data-i18n="nav_features">Características</a></li>
+                <li><a href="#capturas" data-i18n="nav_interface">Interfaz</a></li>
+                <li><a href="#descargas" data-i18n="nav_downloads">Descargas</a></li>
+                <li><a href="#precios" data-i18n="nav_pricing">Precios</a></li>
+                <li><a href="#faq" data-i18n="nav_faq">Preguntas</a></li>
             </ul>
 
             <div class="nav-actions">
+                <!-- Selector Multilingüe: ES, EN, PT -->
+                <div class="lang-selector-wrapper">
+                    <button class="lang-selector-btn" id="lang-btn" onclick="toggleLangMenu(event)" aria-label="Cambiar idioma">
+                        <span class="lang-flag" id="lang-current-flag">🇪🇸</span>
+                        <span class="lang-label" id="lang-current-label">ES</span>
+                        <svg class="lang-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="lang-dropdown" id="lang-dropdown">
+                        <button class="lang-option active" data-lang="es" onclick="changeLanguage('es')">
+                            <span>🇪🇸</span>
+                            <div class="lang-option-text">
+                                <strong>Español</strong>
+                                <small>ES</small>
+                            </div>
+                        </button>
+                        <button class="lang-option" data-lang="en" onclick="changeLanguage('en')">
+                            <span>🇺🇸</span>
+                            <div class="lang-option-text">
+                                <strong>English</strong>
+                                <small>EN</small>
+                            </div>
+                        </button>
+                        <button class="lang-option" data-lang="pt" onclick="changeLanguage('pt')">
+                            <span>🇧🇷</span>
+                            <div class="lang-option-text">
+                                <strong>Português</strong>
+                                <small>PT</small>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
                 <a href="#descargas" class="btn-nav-primary">
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                         <polyline points="7 10 12 15 17 10"/>
                         <line x1="12" y1="15" x2="12" y2="3"/>
                     </svg>
-                    Descargar
+                    <span data-i18n="nav_download_btn">Descargar</span>
                 </a>
             </div>
         </nav>
@@ -66,14 +98,14 @@
         <header class="hero">
             <div class="pill-version">
                 <span class="pill-dot"></span>
-                <span>OptiToolkit Pro v3.0.0 Oficial</span>
+                <span data-i18n="hero_badge">OptiToolkit Pro v3.0.0 Oficial</span>
             </div>
 
-            <h1>
+            <h1 data-i18n-html="hero_title_html">
                 La Suite Definitiva de <span class="gradient-text">Rendimiento, Mantenimiento</span> y Taller para Windows
             </h1>
 
-            <p class="hero-sub">
+            <p class="hero-sub" data-i18n="hero_sub">
                 Software nativo en C# (.NET 10) que optimiza la latencia del sistema, instala aplicaciones sin publicidad, diagnostica hardware en tiempo real y genera informes técnicos en PDF. Cero telemetría. Sin suscripciones mensuales.
             </p>
 
@@ -85,7 +117,7 @@
                         <polyline points="7 10 12 15 17 10" />
                         <line x1="12" y1="15" x2="12" y2="3" />
                     </svg>
-                    Descargar Instalador (.exe)
+                    <span data-i18n="hero_btn_installer">Descargar Instalador (.exe)</span>
                 </a>
                 <a href="#descargas" class="btn-cta-portable">
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -93,13 +125,13 @@
                         <polyline points="7 11 12 16 17 11" />
                         <line x1="12" y1="4" x2="12" y2="16" />
                     </svg>
-                    Versión Portable (Sin instalación)
+                    <span data-i18n="hero_btn_portable">Versión Portable (Sin instalación)</span>
                 </a>
             </div>
 
             <!-- PowerShell 1-Click Launch -->
             <div class="command-wrapper">
-                <span class="command-label">O inicia al instante desde PowerShell (Administrador):</span>
+                <span class="command-label" data-i18n="hero_cmd_label">O inicia al instante desde PowerShell (Administrador):</span>
                 <div class="command-box">
                     <span class="prefix">&gt;</span>
                     <code id="ps-cmd">irm https://optiroder.github.io/toolkit.ps1 | iex</code>
@@ -108,7 +140,7 @@
                             <rect x="9" y="9" width="13" height="13" rx="2" />
                             <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
                         </svg>
-                        <span>Copiar</span>
+                        <span data-i18n="hero_copy_btn">Copiar</span>
                     </button>
                 </div>
             </div>
@@ -117,19 +149,19 @@
             <div class="trust-badges">
                 <div class="trust-badge-item">
                     <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    Windows 10 y 11 (x64)
+                    <span data-i18n="trust_windows">Windows 10 y 11 (x64)</span>
                 </div>
                 <div class="trust-badge-item">
                     <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    Binario C# Nativo Autocontenido
+                    <span data-i18n="trust_binary">Binario C# Nativo Autocontenido</span>
                 </div>
                 <div class="trust-badge-item">
                     <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    Cero Telemetría / 100% Privado
+                    <span data-i18n="trust_telemetry">Cero Telemetría / 100% Privado</span>
                 </div>
                 <div class="trust-badge-item">
                     <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    Licencia de Pago Único (Lifetime)
+                    <span data-i18n="trust_license">Licencia de Pago Único (Lifetime)</span>
                 </div>
             </div>
         </header>
@@ -139,27 +171,27 @@
              ============================================================ -->
         <section class="showcase-section" id="capturas">
             <div class="section-head">
-                <span class="section-tag">Explora la Interfaz</span>
-                <h2 class="section-title">Diseñado para Máximo Control y Claridad</h2>
-                <p class="section-subtitle">Una estética moderna en modo oscuro desarrollada para gamers exigentes y técnicos profesionales de taller.</p>
+                <span class="section-tag" data-i18n="showcase_tag">Explora la Interfaz</span>
+                <h2 class="section-title" data-i18n="showcase_title">Diseñado para Máximo Control y Claridad</h2>
+                <p class="section-subtitle" data-i18n="showcase_sub">Una estética moderna en modo oscuro desarrollada para gamers exigentes y técnicos profesionales de taller.</p>
             </div>
 
             <!-- Navigation Tabs -->
             <div class="showcase-tabs">
                 <button class="tab-btn active" onclick="switchSlide(0, this)">
-                    <span>⚡</span> Optimización
+                    <span data-i18n="tab_opt">⚡ Optimización</span>
                 </button>
                 <button class="tab-btn" onclick="switchSlide(1, this)">
-                    <span>📦</span> Catálogo de Software
+                    <span data-i18n="tab_apps">📦 Catálogo de Software</span>
                 </button>
                 <button class="tab-btn" onclick="switchSlide(2, this)">
-                    <span>📊</span> Monitor en Vivo
+                    <span data-i18n="tab_monitor">📊 Monitor en Vivo</span>
                 </button>
                 <button class="tab-btn" onclick="switchSlide(3, this)">
-                    <span>🛠️</span> Taller Técnico (T3)
+                    <span data-i18n="tab_tech">🛠️ Taller Técnico (T3)</span>
                 </button>
                 <button class="tab-btn" onclick="switchSlide(4, this)">
-                    <span>💻</span> Sistema y Specs
+                    <span data-i18n="tab_system">💻 Sistema y Specs</span>
                 </button>
             </div>
 
@@ -208,46 +240,46 @@
              ============================================================ -->
         <section class="features-section" id="caracteristicas">
             <div class="section-head">
-                <span class="section-tag">Capacidades Clave</span>
-                <h2 class="section-title">Ingeniería de Precisión para Windows</h2>
-                <p class="section-subtitle">Todo lo que necesitas en una sola aplicación compacta y de arranque instantáneo.</p>
+                <span class="section-tag" data-i18n="feat_tag">Capacidades Clave</span>
+                <h2 class="section-title" data-i18n="feat_title">Ingeniería de Precisión para Windows</h2>
+                <p class="section-subtitle" data-i18n="feat_sub">Todo lo que necesitas en una sola aplicación compacta y de arranque instantáneo.</p>
             </div>
 
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">🚀</div>
-                    <h3>Optimización de Latencia y BCD</h3>
-                    <p>Reduce tiempos de respuesta en juegos y aplicaciones pesadas. Ajusta el registro MMCSS, prioridades de CPU, paginación de memoria RAM y aceleración de arranque en Windows.</p>
+                    <h3 data-i18n="feat_1_title">Optimización de Latencia y BCD</h3>
+                    <p data-i18n="feat_1_desc">Reduce tiempos de respuesta en juegos y aplicaciones pesadas. Ajusta el registro MMCSS, prioridades de CPU, paginación de memoria RAM y aceleración de arranque en Windows.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon purple">📦</div>
-                    <h3>Instalador de Software Inteligente</h3>
-                    <p>Descarga directa de los navegadores, plataformas de juegos y herramientas más populares. Sin paquetes de telemetría adicionales, con cola multihilo y barra de progreso real.</p>
+                    <h3 data-i18n="feat_2_title">Instalador de Software Inteligente</h3>
+                    <p data-i18n="feat_2_desc">Descarga directa de los navegadores, plataformas de juegos y herramientas más populares. Sin paquetes de telemetría adicionales, con cola multihilo y barra de progreso real.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon emerald">🛡️</div>
-                    <h3>Snapshots y Reversibilidad Total</h3>
-                    <p>Crea copias de seguridad del registro, puntos de restauración del sistema y snapshots de configuración antes de cualquier cambio. Reviértelo todo en 1 clic ante cualquier imprevisto.</p>
+                    <h3 data-i18n="feat_3_title">Snapshots y Reversibilidad Total</h3>
+                    <p data-i18n="feat_3_desc">Crea copias de seguridad del registro, puntos de restauración del sistema y snapshots de configuración antes de cualquier cambio. Reviértelo todo en 1 clic ante cualquier imprevisto.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon amber">📄</div>
-                    <h3>Informes Técnicos en PDF</h3>
-                    <p>Ideal para talleres y técnicos: genera reportes vectoriales certificados en PDF con especificaciones del equipo, diagnóstico S.M.A.R.T. de discos y estado de mantenimiento para tus clientes.</p>
+                    <h3 data-i18n="feat_4_title">Informes Técnicos en PDF</h3>
+                    <p data-i18n="feat_4_desc">Ideal para talleres y técnicos: genera reportes vectoriales certificados en PDF con especificaciones del equipo, diagnóstico S.M.A.R.T. de discos y estado de mantenimiento para tus clientes.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">🛠️</div>
-                    <h3>Modo USB Portable Técnico</h3>
-                    <p>Lleva la suite completa en tu pendrive USB. Ejecútala en tantas computadoras de clientes como necesites sin necesidad de instalar o dejar residuos en el sistema.</p>
+                    <h3 data-i18n="feat_5_title">Modo USB Portable Técnico</h3>
+                    <p data-i18n="feat_5_desc">Lleva la suite completa en tu pendrive USB. Ejecútala en tantas computadoras de clientes como necesites sin necesidad de instalar o dejar residuos en el sistema.</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon emerald">🔒</div>
-                    <h3>Cero Telemetría y Criptografía Ed25519</h3>
-                    <p>Tu privacidad es sagrada. La aplicación no recopila datos de navegación, contraseñas ni archivos. El sistema de licencias funciona offline mediante firmas asimétricas de alta seguridad.</p>
+                    <h3 data-i18n="feat_6_title">Cero Telemetría y Criptografía Ed25519</h3>
+                    <p data-i18n="feat_6_desc">Tu privacidad es sagrada. La aplicación no recopila datos de navegación, contraseñas ni archivos. El sistema de licencias funciona offline mediante firmas asimétricas de alta seguridad.</p>
                 </div>
             </div>
         </section>
@@ -257,43 +289,43 @@
              ============================================================ -->
         <section class="download-section" id="descargas">
             <div class="section-head">
-                <span class="section-tag">Descargas Oficiales</span>
-                <h2 class="section-title">Elige Cómo Deseas Ejecutarlo</h2>
-                <p class="section-subtitle">Descarga directa sin enlaces acortados ni publicidad invasiva.</p>
+                <span class="section-tag" data-i18n="dl_tag">Descargas Oficiales</span>
+                <h2 class="section-title" data-i18n="dl_title">Elige Cómo Deseas Ejecutarlo</h2>
+                <p class="section-subtitle" data-i18n="dl_sub">Descarga directa sin enlaces acortados ni publicidad invasiva.</p>
             </div>
 
             <div class="download-grid">
                 
                 <!-- Opción 1: Con Instalador (Recomendado) -->
                 <div class="dl-card featured">
-                    <div class="dl-badge-recommend">Recomendado</div>
+                    <div class="dl-badge-recommend" data-i18n="dl_c1_badge">Recomendado</div>
                     <div>
                         <div class="dl-header">
                             <div class="dl-icon-badge">💾</div>
                             <div>
-                                <h3>Instalador Oficial</h3>
-                                <span class="dl-tag">Setup Asistido · .EXE (~60 MB)</span>
+                                <h3 data-i18n="dl_c1_title">Instalador Oficial</h3>
+                                <span class="dl-tag" data-i18n="dl_c1_sub">Setup Asistido · .EXE (~60 MB)</span>
                             </div>
                         </div>
-                        <p class="dl-desc">
+                        <p class="dl-desc" data-i18n="dl_c1_desc">
                             Instalación estándar guiada para Windows. Integra accesos directos en el Escritorio, menú Inicio y desinstalador completo en el Panel de Control.
                         </p>
                         <ul class="dl-features">
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                                Instalación en <code>Archivos de Programa</code>
+                                <span data-i18n-html="dl_c1_f1_html">Instalación en <code>Archivos de Programa</code></span>
                             </li>
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                                Acceso directo en Menú Inicio y Escritorio
+                                <span data-i18n="dl_c1_f2">Acceso directo en Menú Inicio y Escritorio</span>
                             </li>
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                                Desinstalador limpio integrado
+                                <span data-i18n="dl_c1_f3">Desinstalador limpio integrado</span>
                             </li>
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                                Actualización automática asistida
+                                <span data-i18n="dl_c1_f4">Actualización automática asistida</span>
                             </li>
                         </ul>
                     </div>
@@ -303,7 +335,7 @@
                             <polyline points="7 10 12 15 17 10"/>
                             <line x1="12" y1="15" x2="12" y2="3"/>
                         </svg>
-                        Descargar Instalador (v3.0.0)
+                        <span data-i18n="dl_c1_btn">Descargar Instalador (v3.0.0)</span>
                     </a>
                 </div>
 
@@ -313,29 +345,29 @@
                         <div class="dl-header">
                             <div class="dl-icon-badge">⚡</div>
                             <div>
-                                <h3>Edición Portable</h3>
-                                <span class="dl-tag">Sin Instalación · Standalone / ZIP (~60 MB)</span>
+                                <h3 data-i18n="dl_c2_title">Edición Portable</h3>
+                                <span class="dl-tag" data-i18n="dl_c2_sub">Sin Instalación · Standalone / ZIP (~60 MB)</span>
                             </div>
                         </div>
-                        <p class="dl-desc">
+                        <p class="dl-desc" data-i18n="dl_c2_desc">
                             Ideal para técnicos, soporte a domicilio o uso rápido. Extrae y ejecuta directamente en cualquier PC o pendrive USB sin alterar el registro.
                         </p>
                         <ul class="dl-features">
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                                No requiere instalación en el sistema
+                                <span data-i18n="dl_c2_f1">No requiere instalación en el sistema</span>
                             </li>
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                                100% Autocontenido (.NET 10 integrado)
+                                <span data-i18n="dl_c2_f2">100% Autocontenido (.NET 10 integrado)</span>
                             </li>
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                                Ejecución directa desde memorias USB
+                                <span data-i18n="dl_c2_f3">Ejecución directa desde memorias USB</span>
                             </li>
                             <li>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                                Cero residuos al retirar el ejecutable
+                                <span data-i18n="dl_c2_f4">Cero residuos al retirar el ejecutable</span>
                             </li>
                         </ul>
                     </div>
@@ -345,7 +377,7 @@
                             <polyline points="7 10 12 15 17 10"/>
                             <line x1="12" y1="15" x2="12" y2="3"/>
                         </svg>
-                        Descargar Versión Portable
+                        <span data-i18n="dl_c2_btn">Descargar Versión Portable</span>
                     </a>
                 </div>
 
@@ -357,9 +389,9 @@
              ============================================================ -->
         <section class="pricing-section" id="precios">
             <div class="section-head">
-                <span class="section-tag">Planes y Licencias</span>
-                <h2 class="section-title">Elige tu Nivel de Acceso</h2>
-                <p class="section-subtitle">
+                <span class="section-tag" data-i18n="price_tag">Planes y Licencias</span>
+                <h2 class="section-title" data-i18n="price_title">Elige tu Nivel de Acceso</h2>
+                <p class="section-subtitle" data-i18n-html="price_sub_html">
                     Modelo honesto de <strong>pago único (Licencia Vitalicia)</strong>. Sin pagos mensuales ni sorpresas.
                 </p>
             </div>
@@ -369,13 +401,13 @@
                 <!-- Tier 1: Personal / Gamer -->
                 <div class="pricing-card">
                     <div class="pricing-top">
-                        <div class="pricing-tier-tag">Nivel 1 · Personal</div>
-                        <h3 class="pricing-title">Personal / Gamer</h3>
-                        <p class="pricing-desc">Aceleración para un equipo personal, gaming competitivo y optimización básica de RAM y disco.</p>
+                        <div class="pricing-tier-tag" data-i18n="p1_tag">Nivel 1 · Personal</div>
+                        <h3 class="pricing-title" data-i18n="p1_title">Personal / Gamer</h3>
+                        <p class="pricing-desc" data-i18n="p1_desc">Aceleración para un equipo personal, gaming competitivo y optimización básica de RAM y disco.</p>
                         
                         <div class="pricing-price-box">
                             <span class="pricing-price">$4.99</span>
-                            <span class="pricing-period">USD / pago único</span>
+                            <span class="pricing-period" data-i18n="price_period">USD / pago único</span>
                         </div>
                     </div>
 
@@ -384,40 +416,40 @@
                     <ul class="pricing-features">
                         <li>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Licencia para <strong>1 PC personal</strong> (HWID)</span>
+                            <span data-i18n-html="p1_f1_html">Licencia para <strong>1 PC personal</strong> (HWID)</span>
                         </li>
                         <li>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Optimizaciones <strong>Minimal y Safe</strong></span>
+                            <span data-i18n-html="p1_f2_html">Optimizaciones <strong>Minimal y Safe</strong></span>
                         </li>
                         <li>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Limpiador de archivos basura y RAM</span>
+                            <span data-i18n="p1_f3">Limpiador de archivos basura y RAM</span>
                         </li>
                         <li>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Catálogo estándar de programas</span>
+                            <span data-i18n="p1_f4">Catálogo estándar de programas</span>
                         </li>
                         <li>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Monitor de hardware en tiempo real</span>
+                            <span data-i18n="p1_f5">Monitor de hardware en tiempo real</span>
                         </li>
                     </ul>
 
-                    <a href="https://optitoolkit.com/pro" class="btn-pricing outline" target="_blank" rel="noopener">Adquirir Nivel 1</a>
+                    <a href="https://optitoolkit.com/pro" class="btn-pricing outline" target="_blank" rel="noopener" data-i18n="p1_btn">Adquirir Nivel 1</a>
                 </div>
 
                 <!-- Tier 2: Power User (Popular) -->
                 <div class="pricing-card popular">
-                    <div class="pricing-badge-popular">Más Popular</div>
+                    <div class="pricing-badge-popular" data-i18n="p2_badge">Más Popular</div>
                     <div class="pricing-top">
-                        <div class="pricing-tier-tag">Nivel 2 · Avanzado</div>
-                        <h3 class="pricing-title">Power User</h3>
-                        <p class="pricing-desc">El balance definitivo de rendimiento extremo, desbloqueo de red y control total del sistema.</p>
+                        <div class="pricing-tier-tag" data-i18n="p2_tag">Nivel 2 · Avanzado</div>
+                        <h3 class="pricing-title" data-i18n="p2_title">Power User</h3>
+                        <p class="pricing-desc" data-i18n="p2_desc">El balance definitivo de rendimiento extremo, desbloqueo de red y control total del sistema.</p>
                         
                         <div class="pricing-price-box">
                             <span class="pricing-price">$9.99</span>
-                            <span class="pricing-period">USD / pago único</span>
+                            <span class="pricing-period" data-i18n="price_period">USD / pago único</span>
                         </div>
                     </div>
 
@@ -426,43 +458,43 @@
                     <ul class="pricing-features">
                         <li>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Licencia para <strong>hasta 3 PCs</strong> del hogar</span>
+                            <span data-i18n-html="p2_f1_html">Licencia para <strong>hasta 3 PCs</strong> del hogar</span>
                         </li>
                         <li>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span><strong>Todo lo de Nivel 1</strong> incluido</span>
+                            <span data-i18n-html="p2_f2_html"><strong>Todo lo de Nivel 1</strong> incluido</span>
                         </li>
                         <li>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Perfiles <strong>Gaming (FPS Boost)</strong> y Extremo</span>
+                            <span data-i18n-html="p2_f3_html">Perfiles <strong>Gaming (FPS Boost)</strong> y Extremo</span>
                         </li>
                         <li>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Control Defender, Windows Update y BCD</span>
+                            <span data-i18n="p2_f4">Control Defender, Windows Update y BCD</span>
                         </li>
                         <li>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Desinstalador de Bloatware Windows 10/11</span>
+                            <span data-i18n="p2_f5">Desinstalador de Bloatware Windows 10/11</span>
                         </li>
                         <li>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Optimizador de Red, Winsock y DNS Jumper</span>
+                            <span data-i18n="p2_f6">Optimizador de Red, Winsock y DNS Jumper</span>
                         </li>
                     </ul>
 
-                    <a href="https://optitoolkit.com/pro" class="btn-pricing highlight" target="_blank" rel="noopener">Adquirir Nivel 2</a>
+                    <a href="https://optitoolkit.com/pro" class="btn-pricing highlight" target="_blank" rel="noopener" data-i18n="p2_btn">Adquirir Nivel 2</a>
                 </div>
 
                 <!-- Tier 3: Técnico / Taller -->
                 <div class="pricing-card workshop">
                     <div class="pricing-top">
-                        <div class="pricing-tier-tag">Nivel 3 · Taller Pro</div>
-                        <h3 class="pricing-title">Técnico / Taller</h3>
-                        <p class="pricing-desc">Para técnicos de soporte, talleres de ensamblaje y mantenimiento comercial en clientes.</p>
+                        <div class="pricing-tier-tag" data-i18n="p3_tag">Nivel 3 · Taller Pro</div>
+                        <h3 class="pricing-title" data-i18n="p3_title">Técnico / Taller</h3>
+                        <p class="pricing-desc" data-i18n="p3_desc">Para técnicos de soporte, talleres de ensamblaje y mantenimiento comercial en clientes.</p>
                         
                         <div class="pricing-price-box">
                             <span class="pricing-price">$19.99</span>
-                            <span class="pricing-period">USD / pago único</span>
+                            <span class="pricing-period" data-i18n="price_period">USD / pago único</span>
                         </div>
                     </div>
 
@@ -471,31 +503,31 @@
                     <ul class="pricing-features">
                         <li>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span><strong>PCs ILIMITADAS</strong> de clientes</span>
+                            <span data-i18n-html="p3_f1_html"><strong>PCs ILIMITADAS</strong> de clientes</span>
                         </li>
                         <li>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span><strong>Modo Pendrive USB Portable</strong> de taller</span>
+                            <span data-i18n-html="p3_f2_html"><strong>Modo Pendrive USB Portable</strong> de taller</span>
                         </li>
                         <li>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span><strong>Informes Técnicos en PDF</strong> certificados</span>
+                            <span data-i18n-html="p3_f3_html"><strong>Informes Técnicos en PDF</strong> certificados</span>
                         </li>
                         <li>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Reparación de Spooler, WinUpdate y WSReset</span>
+                            <span data-i18n="p3_f4">Reparación de Spooler, WinUpdate y WSReset</span>
                         </li>
                         <li>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Suite de Rescate Live USB (Ventoy & Hiren's)</span>
+                            <span data-i18n="p3_f5">Suite de Rescate Live USB (Ventoy & Hiren's)</span>
                         </li>
                         <li>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                            <span>Cifrador de archivos AES-256 & generador seguro</span>
+                            <span data-i18n="p3_f6">Cifrador de archivos AES-256 & generador seguro</span>
                         </li>
                     </ul>
 
-                    <a href="https://optitoolkit.com/pro" class="btn-pricing workshop-btn" target="_blank" rel="noopener">Adquirir Nivel 3</a>
+                    <a href="https://optitoolkit.com/pro" class="btn-pricing workshop-btn" target="_blank" rel="noopener" data-i18n="p3_btn">Adquirir Nivel 3</a>
                 </div>
 
             </div>
@@ -503,7 +535,7 @@
             <!-- Transparency badge -->
             <div class="pricing-guarantee">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                <span>Sin suscripciones recurrentes. Pagas una sola vez y la clave te pertenece de por vida. Incluye modo de prueba gratuita de 15 minutos dentro de la aplicación.</span>
+                <span data-i18n="price_guarantee">Sin suscripciones recurrentes. Pagas una sola vez y la clave te pertenece de por vida. Incluye modo de prueba gratuita de 15 minutos dentro de la aplicación.</span>
             </div>
         </section>
 
@@ -512,58 +544,58 @@
              ============================================================ -->
         <section class="faq-section" id="faq">
             <div class="section-head">
-                <span class="section-tag">Dudas Habituales</span>
-                <h2 class="section-title">Preguntas Frecuentes</h2>
+                <span class="section-tag" data-i18n="faq_tag">Dudas Habituales</span>
+                <h2 class="section-title" data-i18n="faq_title">Preguntas Frecuentes</h2>
             </div>
 
             <div class="faq-accordion">
                 <div class="faq-item active">
                     <button class="faq-question" onclick="toggleFaq(this)">
-                        <span>¿Es seguro aplicar estas optimizaciones en mi sistema?</span>
+                        <span data-i18n="faq_q1">¿Es seguro aplicar estas optimizaciones en mi sistema?</span>
                         <span class="faq-icon">↓</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Sí. A diferencia de scripts masivos de internet que rompen servicios críticos, OptiToolkit Pro fue diseñado con filtros de seguridad y categorías progresivas (Minimal, Safe, Gaming). Además, antes de aplicar cambios profundos, el software cuenta con un sistema automático de Puntos de Restauración y Snapshots de registro para revertir todo en 1 clic.</p>
+                        <p data-i18n="faq_a1">Sí. A diferencia de scripts masivos de internet que rompen servicios críticos, OptiToolkit Pro fue diseñado con filtros de seguridad y categorías progresivas (Minimal, Safe, Gaming). Además, antes de aplicar cambios profundos, el software cuenta con un sistema automático de Puntos de Restauración y Snapshots de registro para revertir todo en 1 clic.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question" onclick="toggleFaq(this)">
-                        <span>¿Cuál es la diferencia entre la versión Portable y el Instalador?</span>
+                        <span data-i18n="faq_q2">¿Cuál es la diferencia entre la versión Portable y el Instalador?</span>
                         <span class="faq-icon">↓</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Ambas contienen exactamente las mismas funciones y rendimiento. La versión Portable no requiere instalación y puede ejecutarse directamente desde una memoria USB o cualquier carpeta. El Instalador (.exe) agrega accesos directos en el menú Inicio, escritorio y soporte de desinstalación limpia desde el Panel de Control.</p>
+                        <p data-i18n="faq_a2">Ambas contienen exactamente las mismas funciones y rendimiento. La versión Portable no requiere instalación y puede ejecutarse directamente desde una memoria USB o cualquier carpeta. El Instalador (.exe) agrega accesos directos en el menú Inicio, escritorio y soporte de desinstalación limpia desde el Panel de Control.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question" onclick="toggleFaq(this)">
-                        <span>¿Cómo funciona el Nivel 3 para Técnicos y Talleres?</span>
+                        <span data-i18n="faq_q3">¿Cómo funciona el Nivel 3 para Técnicos y Talleres?</span>
                         <span class="faq-icon">↓</span>
                     </button>
                     <div class="faq-answer">
-                        <p>El Nivel 3 incluye autorización expresa para que técnicos de soporte lleven su clave en modo pendrive USB y realicen tareas de formateo, optimización, post-instalación de programas y diagnóstico en computadoras ilimitadas de sus clientes, además de poder generar el informe técnico en PDF con el logotipo y datos del taller.</p>
+                        <p data-i18n="faq_a3">El Nivel 3 incluye autorización expresa para que técnicos de soporte lleven su clave en modo pendrive USB y realicen tareas de formateo, optimización, post-instalación de programas y diagnóstico en computadoras ilimitadas de sus clientes, además de poder generar el informe técnico en PDF con el logotipo y datos del taller.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question" onclick="toggleFaq(this)">
-                        <span>¿Funciona en Windows 10 y Windows 11?</span>
+                        <span data-i18n="faq_q4">¿Funciona en Windows 10 y Windows 11?</span>
                         <span class="faq-icon">↓</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Sí, es compatible tanto con Windows 10 como con Windows 11 en sus arquitecturas de 64 bits (x64), incluyendo ediciones Home, Pro, Enterprise y LTSC.</p>
+                        <p data-i18n="faq_a4">Sí, es compatible tanto con Windows 10 como con Windows 11 en sus arquitecturas de 64 bits (x64), incluyendo ediciones Home, Pro, Enterprise y LTSC.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question" onclick="toggleFaq(this)">
-                        <span>¿Qué pasa si formateo mi ordenador o cambio componentes?</span>
+                        <span data-i18n="faq_q5">¿Qué pasa si formateo mi ordenador o cambio componentes?</span>
                         <span class="faq-icon">↓</span>
                     </button>
                     <div class="faq-answer">
-                        <p>El identificador de hardware (HWID) utiliza un algoritmo tolerante de huella digital de placa base y procesador. Formatear el disco duro o reinstalar Windows mantendrá tu activación intacta automáticamente.</p>
+                        <p data-i18n="faq_a5">El identificador de hardware (HWID) utiliza un algoritmo tolerante de huella digital de placa base y procesador. Formatear el disco duro o reinstalar Windows mantendrá tu activación intacta automáticamente.</p>
                     </div>
                 </div>
             </div>
@@ -574,22 +606,25 @@
              ============================================================ -->
         <footer class="footer">
             <div class="footer-top">
-                <div>
+                <div data-i18n-html="footer_desc_html">
                     <strong style="color:#fff;">OptiToolkit Pro</strong> — Suite Profesional de Optimización by <strong>RODER</strong>
                 </div>
                 <div class="footer-links">
                     <a href="https://github.com/OptiRoder/OptiRoder.github.io" target="_blank" rel="noopener">GitHub</a>
                     <a href="https://github.com/OptiRoder/OptiRoder.github.io/releases/latest" target="_blank" rel="noopener">Releases</a>
-                    <a href="#descargas">Descargas</a>
-                    <a href="#precios">Precios</a>
+                    <a href="#descargas" data-i18n="nav_downloads">Descargas</a>
+                    <a href="#precios" data-i18n="nav_pricing">Precios</a>
                 </div>
             </div>
-            <div class="footer-bottom">
+            <div class="footer-bottom" data-i18n="footer_rights">
                 &copy; 2026 RODER. Todos los derechos reservados. Desarrollado con C# y .NET 10.
             </div>
         </footer>
 
     </div>
+
+    <!-- Multi-Language i18n Engine (ES, EN, PT) -->
+    <script src="i18n.js"></script>
 
     <!-- ============================================================
          SCRIPTS: TABS, FAQ, COPY & GITHUB RELEASES
@@ -600,10 +635,11 @@
             const text = document.getElementById(id).innerText;
             navigator.clipboard.writeText(text).then(() => {
                 const originalHtml = btn.innerHTML;
+                const copiedText = (typeof I18N_DATA !== 'undefined' && I18N_DATA[currentLang] && I18N_DATA[currentLang].hero_copied) ? I18N_DATA[currentLang].hero_copied : '¡Copiado!';
                 btn.classList.add('copied');
                 btn.innerHTML = `
                     <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    <span>¡Copiado!</span>
+                    <span>${copiedText}</span>
                 `;
                 setTimeout(() => {
                     btn.classList.remove('copied');
