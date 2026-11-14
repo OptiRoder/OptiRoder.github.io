@@ -1,11 +1,11 @@
 // =============================================================================
-//  OptiToolkit Pro — Multi-Language Support (i18n: ES, EN, PT)
+//  TorkeToolkit Pro — Multi-Language Support (i18n: ES, EN, PT)
 // =============================================================================
 
 const I18N_DATA = {
     es: {
-        meta_title: "OptiToolkit Pro — Suite de Rendimiento, Mantenimiento y Taller para Windows",
-        meta_desc: "OptiToolkit Pro v3.0.0 — Software nativo de optimización, instalador inteligente de programas, monitor en vivo y suite técnica para Windows 10 y 11. Sin suscripciones ni telemetría.",
+        meta_title: "TorkeToolkit Pro — Suite de Rendimiento, Mantenimiento y Taller para Windows",
+        meta_desc: "TorkeToolkit Pro v3.0.0 — Software nativo de optimización, instalador inteligente de programas, monitor en vivo y suite técnica para Windows 10 y 11. Sin suscripciones ni telemetría.",
         
         // Navbar
         nav_features: "Características",
@@ -16,7 +16,7 @@ const I18N_DATA = {
         nav_download_btn: "Descargar",
 
         // Hero
-        hero_badge: "OptiToolkit Pro v3.0.0 Oficial",
+        hero_badge: "TorkeToolkit Pro v3.0.0 Oficial",
         hero_title_html: "La Suite Definitiva de <span class=\"gradient-text\">Rendimiento, Mantenimiento</span> y Taller para Windows",
         hero_sub: "Software nativo en C# (.NET 10) que optimiza la latencia del sistema, instala aplicaciones sin publicidad, diagnostica hardware en tiempo real y genera informes técnicos en PDF. Cero telemetría. Sin suscripciones mensuales.",
         hero_btn_installer: "Descargar Instalador (.exe)",
@@ -41,15 +41,15 @@ const I18N_DATA = {
         tab_tech: "🛠️ Taller Técnico (T3)",
         tab_system: "💻 Sistema y Specs",
         
-        slide_0_title: "OptiToolkit Pro — Módulo de Optimización de Sistema",
+        slide_0_title: "TorkeToolkit Pro — Módulo de Optimización de Sistema",
         slide_0_caption: "Perfiles calibrados de latencia: Minimal, Safe, Recomendada, Gaming (FPS Boost) y Extrema con Rollback en 1-Clic.",
-        slide_1_title: "OptiToolkit Installer Pro — Gestor Multihilo de Aplicaciones",
+        slide_1_title: "TorkeToolkit Installer Pro — Gestor Multihilo de Aplicaciones",
         slide_1_caption: "Instala navegadores, launchers de juegos y herramientas esenciales sin instaladores basura y con barra de descarga en vivo.",
-        slide_2_title: "OptiToolkit Pro — Monitor de Rendimiento y Recursos",
+        slide_2_title: "TorkeToolkit Pro — Monitor de Rendimiento y Recursos",
         slide_2_caption: "Métricas en vivo actualizadas cada 2 segundos: temperatura CPU en tiempo real, consumo de RAM y almacenamiento.",
-        slide_3_title: "OptiToolkit Pro — Taller Técnico y Reportes PDF (Tier 3)",
+        slide_3_title: "TorkeToolkit Pro — Taller Técnico y Reportes PDF (Tier 3)",
         slide_3_caption: "Herramientas profesionales de rescate: reparación de Spooler/Windows Update y generador de informes técnicos en PDF.",
-        slide_4_title: "OptiToolkit Pro — Especificaciones y Gestión del Sistema",
+        slide_4_title: "TorkeToolkit Pro — Especificaciones y Gestión del Sistema",
         slide_4_caption: "Detección profunda de componentes (CPU Xeon/Core/Ryzen, GPU, RAM, Disco) y administración rápida de cuentas de usuario.",
 
         // Features
@@ -139,7 +139,7 @@ const I18N_DATA = {
         faq_tag: "Dudas Habituales",
         faq_title: "Preguntas Frecuentes",
         faq_q1: "¿Es seguro aplicar estas optimizaciones en mi sistema?",
-        faq_a1: "Sí. A diferencia de scripts masivos de internet que rompen servicios críticos, OptiToolkit Pro fue diseñado con filtros de seguridad y categorías progresivas (Minimal, Safe, Gaming). Además, antes de aplicar cambios profundos, el software cuenta con un sistema automático de Puntos de Restauración y Snapshots de registro para revertir todo en 1 clic.",
+        faq_a1: "Sí. A diferencia de scripts masivos de internet que rompen servicios críticos, TorkeToolkit Pro fue diseñado con filtros de seguridad y categorías progresivas (Minimal, Safe, Gaming). Además, antes de aplicar cambios profundos, el software cuenta con un sistema automático de Puntos de Restauración y Snapshots de registro para revertir todo en 1 clic.",
         faq_q2: "¿Cuál es la diferencia entre la versión Portable y el Instalador?",
         faq_a2: "Ambas contienen exactamente las mismas funciones y rendimiento. La versión Portable no requiere instalación y puede ejecutarse directamente desde una memoria USB o cualquier carpeta. El Instalador (.exe) agrega accesos directos en el menú Inicio, escritorio y soporte de desinstalación limpia desde el Panel de Control.",
         faq_q3: "¿Cómo funciona el Nivel 3 para Técnicos y Talleres?",
@@ -150,13 +150,13 @@ const I18N_DATA = {
         faq_a5: "El identificador de hardware (HWID) utiliza un algoritmo tolerante de huella digital de placa base y procesador. Formatear el disco duro o reinstalar Windows mantendrá tu activación intacta automáticamente.",
 
         // Footer
-        footer_desc_html: "<strong style=\"color:#fff;\">OptiToolkit Pro</strong> — Suite Profesional de Optimización by <strong>RODER</strong>",
+        footer_desc_html: "<strong style=\"color:#fff;\">TorkeToolkit Pro</strong> — Suite Profesional de Optimización by <strong>RODER</strong>",
         footer_rights: "© 2026 RODER. Todos los derechos reservados. Desarrollado con C# y .NET 10."
     },
 
     en: {
-        meta_title: "OptiToolkit Pro — Windows Performance, Maintenance & Workshop Suite",
-        meta_desc: "OptiToolkit Pro v3.0.0 — Native optimization software, intelligent app installer, real-time hardware monitor, and IT workshop suite for Windows 10 & 11. No subscriptions, zero telemetry.",
+        meta_title: "TorkeToolkit Pro — Windows Performance, Maintenance & Workshop Suite",
+        meta_desc: "TorkeToolkit Pro v3.0.0 — Native optimization software, intelligent app installer, real-time hardware monitor, and IT workshop suite for Windows 10 & 11. No subscriptions, zero telemetry.",
         
         // Navbar
         nav_features: "Features",
@@ -167,7 +167,7 @@ const I18N_DATA = {
         nav_download_btn: "Download",
 
         // Hero
-        hero_badge: "OptiToolkit Pro v3.0.0 Official",
+        hero_badge: "TorkeToolkit Pro v3.0.0 Official",
         hero_title_html: "The Ultimate <span class=\"gradient-text\">Performance, Maintenance</span> & Workshop Suite for Windows",
         hero_sub: "Native C# (.NET 10) application that optimizes system latency, installs software clean and ad-free, diagnoses hardware in real time, and generates certified technical PDF reports. Zero telemetry. No monthly subscriptions.",
         hero_btn_installer: "Download Installer (.exe)",
@@ -192,15 +192,15 @@ const I18N_DATA = {
         tab_tech: "🛠️ IT Workshop (T3)",
         tab_system: "💻 System & Specs",
         
-        slide_0_title: "OptiToolkit Pro — System Optimization Module",
+        slide_0_title: "TorkeToolkit Pro — System Optimization Module",
         slide_0_caption: "Fine-calibrated latency profiles: Minimal, Safe, Recommended, Gaming (FPS Boost), and Extreme with 1-Click Rollback.",
-        slide_1_title: "OptiToolkit Installer Pro — Multithreaded App Manager",
+        slide_1_title: "TorkeToolkit Installer Pro — Multithreaded App Manager",
         slide_1_caption: "Install top browsers, game launchers, and essential utilities ad-free with real-time download progress bars.",
-        slide_2_title: "OptiToolkit Pro — Performance & Resource Monitor",
+        slide_2_title: "TorkeToolkit Pro — Performance & Resource Monitor",
         slide_2_caption: "Live metrics refreshed every 2 seconds: real-time CPU temp, RAM utilization, and storage capacity.",
-        slide_3_title: "OptiToolkit Pro — Technical Workshop & PDF Reports (Tier 3)",
+        slide_3_title: "TorkeToolkit Pro — Technical Workshop & PDF Reports (Tier 3)",
         slide_3_caption: "Professional rescue toolkit: Windows Update & Spooler repairs, plus certified vector PDF technical report generation.",
-        slide_4_title: "OptiToolkit Pro — Hardware Specifications & System Management",
+        slide_4_title: "TorkeToolkit Pro — Hardware Specifications & System Management",
         slide_4_caption: "Deep hardware audit (CPU Xeon/Core/Ryzen, GPU, RAM, Disks) and instant user account management.",
 
         // Features
@@ -290,7 +290,7 @@ const I18N_DATA = {
         faq_tag: "Common Questions",
         faq_title: "Frequently Asked Questions",
         faq_q1: "Is it safe to apply these optimizations to my system?",
-        faq_a1: "Yes. Unlike random internet scripts that break critical services, OptiToolkit Pro is built with strict safety boundaries and tiered profiles (Minimal, Safe, Gaming). In addition, before applying deep changes, the app automatically creates System Restore Points and registry snapshots so you can revert everything with 1 click.",
+        faq_a1: "Yes. Unlike random internet scripts that break critical services, TorkeToolkit Pro is built with strict safety boundaries and tiered profiles (Minimal, Safe, Gaming). In addition, before applying deep changes, the app automatically creates System Restore Points and registry snapshots so you can revert everything with 1 click.",
         faq_q2: "What is the difference between the Portable edition and the Installer?",
         faq_a2: "Both provide identical features and performance. The Portable edition requires no installation and can be run straight from a USB stick or any folder. The Installer (.exe) creates desktop and Start Menu shortcuts and supports clean uninstallation via Windows Control Panel.",
         faq_q3: "How does Tier 3 work for IT Technicians and Repair Shops?",
@@ -301,13 +301,13 @@ const I18N_DATA = {
         faq_a5: "The hardware identifier (HWID) uses a fault-tolerant fingerprint based on the motherboard and processor. Formatting disks or reinstalling Windows preserves your activation automatically.",
 
         // Footer
-        footer_desc_html: "<strong style=\"color:#fff;\">OptiToolkit Pro</strong> — Professional Optimization Suite by <strong>RODER</strong>",
+        footer_desc_html: "<strong style=\"color:#fff;\">TorkeToolkit Pro</strong> — Professional Optimization Suite by <strong>RODER</strong>",
         footer_rights: "© 2026 RODER. All rights reserved. Built with C# & .NET 10."
     },
 
     pt: {
-        meta_title: "OptiToolkit Pro — Suite de Desempenho, Manutenção e Oficina para Windows",
-        meta_desc: "OptiToolkit Pro v3.0.0 — Software nativo de otimização, instalador inteligente de aplicativos, monitor em tempo real e suite técnica para Windows 10 e 11. Sem assinaturas nem telemetria.",
+        meta_title: "TorkeToolkit Pro — Suite de Desempenho, Manutenção e Oficina para Windows",
+        meta_desc: "TorkeToolkit Pro v3.0.0 — Software nativo de otimização, instalador inteligente de aplicativos, monitor em tempo real e suite técnica para Windows 10 e 11. Sem assinaturas nem telemetria.",
         
         // Navbar
         nav_features: "Recursos",
@@ -318,7 +318,7 @@ const I18N_DATA = {
         nav_download_btn: "Baixar",
 
         // Hero
-        hero_badge: "OptiToolkit Pro v3.0.0 Oficial",
+        hero_badge: "TorkeToolkit Pro v3.0.0 Oficial",
         hero_title_html: "A Suite Definitiva de <span class=\"gradient-text\">Desempenho, Manutenção</span> e Oficina para Windows",
         hero_sub: "Software nativo em C# (.NET 10) que otimiza a latência do sistema, instala aplicativos sem anúncios, diagnostica hardware em tempo real e gera relatórios técnicos em PDF. Zero telemetria. Sem assinaturas mensais.",
         hero_btn_installer: "Baixar Instalador (.exe)",
@@ -343,15 +343,15 @@ const I18N_DATA = {
         tab_tech: "🛠️ Oficina Técnica (T3)",
         tab_system: "💻 Sistema e Specs",
         
-        slide_0_title: "OptiToolkit Pro — Módulo de Otimização do Sistema",
+        slide_0_title: "TorkeToolkit Pro — Módulo de Otimização do Sistema",
         slide_0_caption: "Perfis calibrados de latência: Minimal, Safe, Recomendada, Gaming (FPS Boost) e Extrema com Rollback em 1 Clique.",
-        slide_1_title: "OptiToolkit Installer Pro — Gerenciador Multithread de Aplicativos",
+        slide_1_title: "TorkeToolkit Installer Pro — Gerenciador Multithread de Aplicativos",
         slide_1_caption: "Instale navegadores, inicializadores de jogos e utilitários sem programas indesejados e com barra de download em tempo real.",
-        slide_2_title: "OptiToolkit Pro — Monitor de Desempenho e Recursos",
+        slide_2_title: "TorkeToolkit Pro — Monitor de Desempenho e Recursos",
         slide_2_caption: "Métricas em tempo real atualizadas a cada 2s: temperatura da CPU, uso de memória RAM e capacidade do disco.",
-        slide_3_title: "OptiToolkit Pro — Oficina Técnica e Relatórios PDF (Nível 3)",
+        slide_3_title: "TorkeToolkit Pro — Oficina Técnica e Relatórios PDF (Nível 3)",
         slide_3_caption: "Ferramentas profissionais de resgate: reparo de Spooler/Windows Update e gerador de relatórios técnicos em PDF.",
-        slide_4_title: "OptiToolkit Pro — Especificações e Gerenciamento do Sistema",
+        slide_4_title: "TorkeToolkit Pro — Especificações e Gerenciamento do Sistema",
         slide_4_caption: "Auditoria detalhada de hardware (CPU Xeon/Core/Ryzen, GPU, RAM, Discos) e gerenciamento rápido de contas de usuário.",
 
         // Features
@@ -441,7 +441,7 @@ const I18N_DATA = {
         faq_tag: "Dúvidas Frequentes",
         faq_title: "Perguntas Frequentes",
         faq_q1: "É seguro aplicar essas otimizações no meu sistema?",
-        faq_a1: "Sim. Ao contrário de scripts genéricos da internet que corrompem serviços essenciais, o OptiToolkit Pro foi projetado com filtros de segurança e categorias progressivas (Minimal, Safe, Gaming). Além disso, antes de alterações profundas, o sistema cria Pontos de Restauração e Snapshots do registro para reverter tudo em 1 clique.",
+        faq_a1: "Sim. Ao contrário de scripts genéricos da internet que corrompem serviços essenciais, o TorkeToolkit Pro foi projetado com filtros de segurança e categorias progressivas (Minimal, Safe, Gaming). Além disso, antes de alterações profundas, o sistema cria Pontos de Restauração e Snapshots do registro para reverter tudo em 1 clique.",
         faq_q2: "Qual a diferença entre a versão Portátil e o Instalador?",
         faq_a2: "Ambas possuem exatamente os mesmos recursos e desempenho. A versão Portátil não requer instalação e pode ser executada direto de um pen drive USB ou pasta. O Instalador (.exe) adiciona atalhos no Menu Iniciar e Desktop, além de permitir desinstalação limpa pelo Painel de Controle.",
         faq_q3: "Como funciona o Nível 3 para Técnicos e Oficinas?",
@@ -452,7 +452,7 @@ const I18N_DATA = {
         faq_a5: "O identificador de hardware (HWID) utiliza um algoritmo tolerante baseado na impressão digital da placa-mãe e processador. Formatar o disco rígido ou reinstalar o Windows preserva sua ativação automaticamente.",
 
         // Footer
-        footer_desc_html: "<strong style=\"color:#fff;\">OptiToolkit Pro</strong> — Suite Profissional de Otimização by <strong>RODER</strong>",
+        footer_desc_html: "<strong style=\"color:#fff;\">TorkeToolkit Pro</strong> — Suite Profissional de Otimização by <strong>RODER</strong>",
         footer_rights: "© 2026 RODER. Todos os direitos reservados. Desenvolvido com C# e .NET 10."
     }
 };
@@ -533,7 +533,7 @@ function setLanguage(lang) {
 
     // Save to localStorage
     try {
-        localStorage.setItem('optitoolkit_lang', lang);
+        localStorage.setItem('torketoolkit_lang', lang);
     } catch (e) {
         // Ignore privacy/quota errors
     }
@@ -565,7 +565,7 @@ document.addEventListener('click', (e) => {
 document.addEventListener('DOMContentLoaded', () => {
     let savedLang = null;
     try {
-        savedLang = localStorage.getItem('optitoolkit_lang');
+        savedLang = localStorage.getItem('torketoolkit_lang');
     } catch (e) {}
 
     if (!savedLang) {
